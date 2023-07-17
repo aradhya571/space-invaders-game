@@ -38,8 +38,8 @@ num_of_enemies = 6
 for i in range(num_of_enemies):
     enemyImg.append(pygame.image.load('./images/alien.png'))
     enemyx.append(random.randint(50, 730))
-    enemyy.append(random.randint(50, 350))
-    enemyx_change.append(0.5)   #giving it 0.3 is super important
+    enemyy.append(random.randint(50, 120))
+    enemyx_change.append(4.0)   #giving it 0.3 is super important
     enemyy_change.append(40)
 
 # bullet
@@ -47,7 +47,7 @@ bulletImg = pygame.image.load('./images/bullet.png')
 bulletx = 0
 bullety = 500
 bulletx_change = 0
-bullety_change = 2
+bullety_change = 2.5
 bullet_state = "ready"    # ready - you can't see the bullet on the screen
 
 # score
@@ -112,9 +112,9 @@ while running:
     #  if keystroke is pressed check whether its right or left
     if event.type == pygame.KEYDOWN: 
         if event.key == pygame.K_LEFT:
-            playerx_change = -0.7
+            playerx_change = -1
         if event.key == pygame.K_RIGHT:
-            playerx_change = 0.7
+            playerx_change = 1
         # if event.key == pygame.K_UP:
         #     playery_change = -0.4
         # if event.key == pygame.K_DOWN:
